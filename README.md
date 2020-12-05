@@ -1,4 +1,4 @@
-# microservices-udacity-project3
+# Microservices-udacity-project3
 
 Steps to perform this project
 

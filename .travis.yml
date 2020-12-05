@@ -4,6 +4,7 @@ services: docker
 
 env:
   - DOCKER_COMPOSE_VERSION=1.25.5
+
   
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
@@ -17,9 +18,10 @@ before_install:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - kubectl version --short --client
-  
-
- 
+    
+# Scripts to be run such as tests
+before_script:
+    - echo "no tests"
   
 install:
   

@@ -15,9 +15,9 @@ before_script:
   
 script:
   - docker --version
-  - docker-compose build --parallel  
+  - docker-compose -f docker-compose.yaml build --parallel
   
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker-compose push
+    - docker-compose -f docker-compose.yaml push
 

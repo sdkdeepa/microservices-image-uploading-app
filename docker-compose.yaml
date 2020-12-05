@@ -1,0 +1,61 @@
+version: '3.7'
+
+services:
+
+  # Proxies requests to internal services
+  reverseproxy:
+    image: sdkdeepa/reverseproxy 
+    container_name: reverseproxy
+    build:
+      context: ./reverse-proxy
+    depends_on:
+        - feed-service
+        - user-service
+    ports:
+      - 8080:8080
+    restart: always
+
+  # Generates Client
+  udagram-frontend:
+    image: sdkdeepa/udagram-frontend 
+    container_name: udagram-frontend
+    build:
+      context: ./udagram-frontend
+    ports:
+      - 8100:80
+    restart: on-failure
+
+  # Retrieves the user microservice
+  user-service:
+    image: sdkdeepa/user-service 
+    container_name: user-service
+    build:
+      context: ./udagram-api-user
+    environment:
+      POSTGRES_USERNAME: 
+      POSTGRES_PASSWORD:  
+      POSTGRES_HOST: 
+      POSTGRES_DATABASE: 
+      AWS_MEDIA_BUCKET: 
+      AWS_REGION: 
+      AWS_PROFILE: 
+      JWT_SECRET: 
+
+  # Generates the feed microservice
+  feed-service:
+    image: sdkdeepa/feed-service 
+    container_name: feed-service
+    volumes:
+      - $HOME/.aws:/root/.aws
+    build:
+      context: ./udagram-api-feed
+    environment:
+      POSTGRES_USERNAME: 
+      POSTGRES_PASSWORD:  
+      POSTGRES_HOST: 
+      POSTGRES_DATABASE: 
+      AWS_MEDIA_BUCKET: 
+      AWS_REGION: 
+      AWS_PROFILE: 
+      JWT_SECRET: 
+    

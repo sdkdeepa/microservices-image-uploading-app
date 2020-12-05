@@ -19,5 +19,5 @@ before_install:
   - kubectl version --short --client
 
 install:
-  - docker-compose -f k8s-deployment/docker/docker-compose.yaml build --parallel 
-  - docker-compose -f k8s-deployment/docker/docker-compose.yaml push
+  - docker-compose build --parallel
+  - docker-compose push

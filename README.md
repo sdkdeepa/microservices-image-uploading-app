@@ -22,6 +22,9 @@ Steps to perform this project
       
 6. Run all the yaml files from k8s prject file
       -  `kubectl apply -f .`
+      - `kubectl get all`
+      - `kubectl port-forward service/frontend 8100:8100` use new tab on the terminal
+      - `kubectl port-forward service/reverseproxy 8080:8080` use new tab on the terminal
 7. Sync the project with Travis CI by selecting the github repo
 8. Create all the Environmental variables in the repo settings of travis
 9. Trigger build

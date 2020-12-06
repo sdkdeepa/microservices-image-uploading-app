@@ -15,7 +15,7 @@ Steps to perform this project
 3. Docker decompose to run the project in local machine
       ![docker terminal image](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/Docker%20images%20terminal.png)
 4. Create EKS cluster and node group
-      ![AWS-EKS-nodegroup](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/k8s%20pods.png)
+      ![AWS-EKS-nodegroup]
 
 5. Connect your deployment files to k8s
       - `aws eks --region <region> update-kubeconfig --name <name of the cluster>`

@@ -2,7 +2,7 @@
 FROM beevelop/ionic:latest AS ionic
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /usr
 
 # Install app dependencies by copying
 # package.json and package-lock.json

@@ -1,8 +1,8 @@
-# Microservices-udacity-project3
+# Microservices-udacity-project3 [![Build Status](https://travis-ci.com/sdkdeepa/microservices-udacity-project3.svg?branch=main)](https://travis-ci.com/sdkdeepa/microservices-udacity-project3)
 
 Steps to perform this project
 
-1. Clone the project
+1. Clone the project 
 2. Create docker images 
 3. Docker decompose to run the project in local machine
 4. Create EKS cluster and node group

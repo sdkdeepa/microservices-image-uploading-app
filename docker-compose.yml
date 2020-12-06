@@ -15,16 +15,6 @@ services:
       - 8080:8080
     restart: always
 
-  # Generates Client
-  udagram-frontend:
-    image: sdkdeepa/udagram-frontend 
-    container_name: udagram-frontend
-    build:
-      context: ./udagram-frontend
-    ports:
-      - 8100:80
-    restart: on-failure
-
   # Retrieves the user microservice
   user-service:
     image: sdkdeepa/user-service 
@@ -58,4 +48,11 @@ services:
       AWS_REGION: 
       AWS_PROFILE: 
       JWT_SECRET: 
+      
+  # Generates Client
+  udagram-frontend:
+    image: sdkdeepa/udagram-frontend 
+    container_name: udagram-frontend
+    ports:
+      - 8100:80
     

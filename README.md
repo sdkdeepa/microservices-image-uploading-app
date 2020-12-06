@@ -2,16 +2,31 @@
 
 Steps to perform this project
 
-1. Clone the project 
-2. Create docker images 
+1. Clone the project - https://github.com/sdkdeepa/Udacity-project3-starter-N-solution/blob/master/project/
+2. To Run locally: 
+      - run   `npm i`
+      - `npm start`
+2. Create docker images for front, backend feed, user, frontend and reverse proxy
+      - `docker build -t <docker local repor name> .`  
+      - `docker tag <local repo> <docker hub name>` 
+      - `docker push <docker hub name> `
+   examples:
+      ![Docker images](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/docker%20images.png)
 3. Docker decompose to run the project in local machine
+      ![docker terminal image](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/Docker%20images%20terminal.png)
 4. Create EKS cluster and node group
-5. connect your deployment files to k8s ( aws eks --region <region> update-kubeconfig --name <name of the cluster>)
+      ![AWS-EKS-nodegroup](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/k8s%20pods.png)
+
+5. Connect your deployment files to k8s
+      - `aws eks --region <region> update-kubeconfig --name <name of the cluster>`
+      
 6. Run all the yaml files from k8s prject file
-7. sync th eproject with Travis CI
+      -  `kubectl apply -f .`
+7. Sync the project with Travis CI by selecting the github repo
 8. Create all the Environmental variables in the repo settings of travis
 9. Trigger build
 10. Once your application builds successfully in travis, you have connected your project to CI CD pipeline!
+![travis-build passing](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/Travis-Build-Pass.png)
+![Frontend](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/localhost8100.png)
   
-  Good Luck!
-  
+

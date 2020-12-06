@@ -19,6 +19,6 @@ before_install:
   - kubectl version --short --client
   
 Install:
-  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
-  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml push
+  - docker-compose -f docker-compose.yaml build --parallel 
+  - docker-compose -f docker-compose.yaml push
 

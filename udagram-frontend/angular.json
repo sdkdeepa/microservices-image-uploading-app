@@ -18,7 +18,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/app/tsconfig.app.json",
+            "tsConfig": "src/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
@@ -124,7 +124,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/app/tsconfig.app.json", "src/app/tsconfig.spec.json"],
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         },

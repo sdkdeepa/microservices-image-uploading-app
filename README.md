@@ -34,4 +34,4 @@ Steps to perform this project
 ![travis-build passing](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/Travis-Build-Pass.png)
 ![Frontend](https://github.com/sdkdeepa/microservices-udacity-project3/blob/main/screenshots/localhost8100.png)
   
-
+### Reference: https://blog.juadel.com/2020/05/15/create-a-kubernetes-cluster-in-amazon-eks-using-a-reverse-proxy/
